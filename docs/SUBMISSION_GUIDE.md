@@ -3,7 +3,7 @@
 ## Submission Title (copy exactly, replace name)
 
 ```
-Phase 2 - Proposal and Code Implementation - Your Name
+Phase 2 - Proposal and Code Implementation - Penthala Harsha Vardhan
 ```
 
 ---
@@ -13,7 +13,7 @@ Phase 2 - Proposal and Code Implementation - Your Name
 | # | Material | What you submit |
 |---|----------|-----------------|
 | 1 | **Proposal document** | Export `docs/PROPOSAL.md` as PDF or Word |
-| 2 | **GitHub repository link** | Public repo URL (see setup below) |
+| 2 | **GitHub repository link** | https://github.com/harshava123/urban_green_cover |
 | 3 | **Kaggle Notebook link** | Optional — link if you upload `notebooks/` |
 | 4 | **README** | Included in GitHub repo (`README.md`) |
 
@@ -69,7 +69,7 @@ git push -u origin main
 
 **Option B:** Paste into Google Docs / Word → format → export PDF
 
-**Before submitting:** Replace `[Your Name]` in the proposal with your full name.
+**Before submitting:** Confirm proposal and Word doc list **Penthala Harsha Vardhan** and the GitHub link above.
 
 ---
 

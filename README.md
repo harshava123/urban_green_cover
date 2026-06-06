@@ -1,6 +1,6 @@
 # Urban Green Cover Image Assessment
 
-**Idea 15 of 75** — CNN-based image analysis for urban greenery classification from scene images.
+CNN-based image analysis for urban greenery classification from scene images.
 
 A teaching-oriented Machine Learning project that compares a custom CNN with transfer learning models, evaluates them rigorously, explains predictions with Grad-CAM, and frames deployment as **decision-support for human experts**.
 
@@ -128,7 +128,11 @@ python scripts/generate_report_figures.py
 | Output figures | `outputs/figures/` |
 | Evaluation reports | `outputs/reports/` |
 
-**Teams submission title:** `Phase 2 - Proposal and Code Implementation - Your Name`
+**Author:** Penthala Harsha Vardhan
+
+**GitHub:** https://github.com/harshava123/urban_green_cover
+
+**Teams submission title:** `Phase 2 - Proposal and Code Implementation - Penthala Harsha Vardhan`
 
 ## Models Compared
 

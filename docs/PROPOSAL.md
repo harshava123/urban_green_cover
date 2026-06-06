@@ -1,14 +1,14 @@
 # Phase 2 — Project Proposal
 
-**Submission title:** Phase 2 - Proposal and Code Implementation - [Your Name]
+**Submission title:** Phase 2 - Proposal and Code Implementation - Penthala Harsha Vardhan
+
+**GitHub repository:** https://github.com/harshava123/urban_green_cover
 
 ---
 
 ## 1. Project Title
 
 **Urban Green Cover Image Assessment: CNN-Based Greenery Classification from Aerial Scene Images**
-
-**Idea code:** Idea 15 of 75 (CNN-Based Image Dataset Project Idea Book)
 
 ---
 
@@ -236,6 +236,3 @@ python scripts/generate_report_figures.py
 3. CSU-RSISC10 / UC Merced Land Use dataset documentation.
 4. Selvaraju, R. R., et al. (2017). Grad-CAM: Visual explanations from deep networks.
 
----
-
-*Replace `[Your Name]` with your full name before submitting on Teams.*
