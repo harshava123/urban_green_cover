@@ -1,0 +1,133 @@
+{
+  "model_name": "custom_cnn",
+  "total_predictions": 314,
+  "error_rate": 0.14968152866242035,
+  "most_common_confusion_pairs": [
+    {
+      "true": "minimal_green",
+      "predicted": "sparse_green",
+      "count": 25
+    },
+    {
+      "true": "sparse_green",
+      "predicted": "minimal_green",
+      "count": 4
+    },
+    {
+      "true": "dense_green",
+      "predicted": "moderate_green",
+      "count": 3
+    },
+    {
+      "true": "dense_green",
+      "predicted": "sparse_green",
+      "count": 3
+    },
+    {
+      "true": "minimal_green",
+      "predicted": "dense_green",
+      "count": 3
+    },
+    {
+      "true": "moderate_green",
+      "predicted": "dense_green",
+      "count": 3
+    },
+    {
+      "true": "dense_green",
+      "predicted": "minimal_green",
+      "count": 2
+    },
+    {
+      "true": "moderate_green",
+      "predicted": "minimal_green",
+      "count": 2
+    },
+    {
+      "true": "sparse_green",
+      "predicted": "moderate_green",
+      "count": 1
+    },
+    {
+      "true": "sparse_green",
+      "predicted": "dense_green",
+      "count": 1
+    }
+  ],
+  "high_confidence_errors": [
+    {
+      "true_class": "minimal_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.923072338104248,
+      "correct": false
+    },
+    {
+      "true_class": "dense_green",
+      "pred_class": "moderate_green",
+      "confidence": 0.9155168533325195,
+      "correct": false
+    },
+    {
+      "true_class": "dense_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.9138292670249939,
+      "correct": false
+    },
+    {
+      "true_class": "minimal_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.9123093485832214,
+      "correct": false
+    },
+    {
+      "true_class": "minimal_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.9094038009643555,
+      "correct": false
+    },
+    {
+      "true_class": "minimal_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.9028337001800537,
+      "correct": false
+    },
+    {
+      "true_class": "moderate_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.8900086283683777,
+      "correct": false
+    },
+    {
+      "true_class": "minimal_green",
+      "pred_class": "dense_green",
+      "confidence": 0.8875949382781982,
+      "correct": false
+    },
+    {
+      "true_class": "minimal_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.8396945595741272,
+      "correct": false
+    },
+    {
+      "true_class": "minimal_green",
+      "pred_class": "sparse_green",
+      "confidence": 0.8224701881408691,
+      "correct": false
+    }
+  ],
+  "deployment_notes": {
+    "screening_role": "Use as decision-support for human review, not autonomous policy decisions.",
+    "main_risks": [
+      "Adjacent greenery classes (sparse vs moderate) are visually similar.",
+      "Seasonal and lighting variation may reduce robustness.",
+      "Dataset geography may not generalize to new cities.",
+      "High-confidence errors can mislead non-expert reviewers."
+    ],
+    "validation_requirements": [
+      "Prospective validation on locally captured street-level images.",
+      "Expert adjudication for borderline cases.",
+      "Periodic retraining with domain-shift monitoring."
+    ]
+  }
+}

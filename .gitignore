@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Data (too large for GitHub — use Kaggle link instead)
+data/raw/
+data/processed/
+
+# Model weights (optional — regenerate with train step)
+outputs/models/*.weights.h5
+outputs/models/*.keras
+outputs/logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

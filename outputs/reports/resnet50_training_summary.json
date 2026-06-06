@@ -1,0 +1,13 @@
+{
+  "model_name": "resnet50",
+  "parameters": 23595908,
+  "trainable_parameters": 8196,
+  "epochs_run": 14,
+  "final_train_accuracy": 0.942216157913208,
+  "final_val_accuracy": 0.9681528806686401,
+  "best_val_accuracy": 0.9808917045593262,
+  "training_time_sec": 1272.7316116000293,
+  "class_weight_used": true,
+  "fine_tune": false,
+  "model_path": "outputs\\models\\resnet50.keras"
+}

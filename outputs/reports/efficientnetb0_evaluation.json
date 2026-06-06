@@ -1,0 +1,55 @@
+{
+  "model_name": "efficientnetb0",
+  "metrics": {
+    "accuracy": 0.6496815286624203,
+    "precision_macro": 0.1624203821656051,
+    "recall_macro": 0.25,
+    "f1_macro": 0.1969111969111969,
+    "precision_weighted": 0.42208608868513936,
+    "recall_weighted": 0.6496815286624203,
+    "f1_weighted": 0.5117182696800531,
+    "roc_auc_ovr": 0.6442238398918708,
+    "avg_inference_ms_per_image": 19.207358333005686,
+    "std_inference_ms_per_image": 2.9477317783823103,
+    "batch_size": 32
+  },
+  "classification_report": {
+    "dense_green": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 46.0
+    },
+    "moderate_green": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 34.0
+    },
+    "sparse_green": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 30.0
+    },
+    "minimal_green": {
+      "precision": 0.6496815286624203,
+      "recall": 1.0,
+      "f1-score": 0.7876447876447876,
+      "support": 204.0
+    },
+    "accuracy": 0.6496815286624203,
+    "macro avg": {
+      "precision": 0.1624203821656051,
+      "recall": 0.25,
+      "f1-score": 0.1969111969111969,
+      "support": 314.0
+    },
+    "weighted avg": {
+      "precision": 0.42208608868513936,
+      "recall": 0.6496815286624203,
+      "f1-score": 0.5117182696800531,
+      "support": 314.0
+    }
+  }
+}

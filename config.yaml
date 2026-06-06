@@ -1,0 +1,101 @@
+# Urban Green Cover Image Assessment - Project Configuration
+# Idea 15: CNN-based urban greenery classification
+
+project:
+  name: "Urban Green Cover Image Assessment"
+  idea_code: "Idea 15 of 75"
+  random_seed: 42
+
+data:
+  # UC Merced Kaggle download (class-named subfolders)
+  dataset: "uc_merced"
+  raw_dir: "data/raw/converted_uc_merced_data"
+  processed_dir: "data/processed"
+  image_size: [224, 224]
+  batch_size: 32
+  validation_split: 0.15
+  test_split: 0.15
+
+  # Greenery taxonomy for urban green cover screening
+  classes:
+    - dense_green
+    - moderate_green
+    - sparse_green
+    - minimal_green
+
+  # UC Merced folder names -> greenery class mapping
+  uc_merced_mapping:
+    dense_green:
+      - forest
+      - agricultural
+      - golfcourse
+    moderate_green:
+      - chaparral
+      - river
+    sparse_green:
+      - mediumresidential
+      - sparseresidential
+      - denseresidential
+    minimal_green:
+      - buildings
+      - freeway
+      - parkinglot
+      - runway
+      - harbor
+      - intersection
+      - overpass
+      - storagetanks
+      - tenniscourt
+      - baseballdiamond
+      - mobilehomepark
+      - airplane
+      - beach
+
+augmentation:
+  rotation_range: 20
+  width_shift_range: 0.15
+  height_shift_range: 0.15
+  horizontal_flip: true
+  zoom_range: 0.15
+  brightness_range: [0.8, 1.2]
+
+training:
+  epochs: 30
+  learning_rate: 0.001
+  early_stopping_patience: 7
+  reduce_lr_patience: 3
+  class_weight: true  # handle imbalance
+
+models:
+  custom_cnn:
+    filters: [32, 64, 128, 256]
+    dropout: 0.4
+  transfer_learning:
+    - mobilenetv2
+    - resnet50
+    - efficientnetb0
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - roc_auc
+  save_confusion_matrix: true
+  measure_inference_time: true
+
+explainability:
+  method: "grad_cam"
+  num_samples_per_category: 5  # correct, false_positive, false_negative
+  grad_cam_layers:
+    custom_cnn: conv_4
+    mobilenetv2: out_relu
+    resnet50: conv5_block3_out
+    efficientnetb0: top_activation
+
+output:
+  models_dir: "outputs/models"
+  figures_dir: "outputs/figures"
+  reports_dir: "outputs/reports"
+  logs_dir: "outputs/logs"

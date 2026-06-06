@@ -1,0 +1,63 @@
+{
+  "research_question": "RQ3",
+  "model": "MobileNetV2",
+  "findings": "Preprocessing (resize to 224x224 and backbone-specific normalization) is essential for transfer learning. Ablation on MobileNetV2 shows: (1) removing augmentation increased test accuracy from 93.3% to 96.2% on this fixed split, with sparse_green F1 rising from 0.79 to 0.89; (2) removing class weights alone yielded 95.2% accuracy; (3) the bare model (no aug, no weights) reached 97.5% test accuracy and highest macro-F1 (0.96). This suggests augmentation and class weights act as regularizers that can lower performance on a static test set while still improving robustness to real-world variation (rotation, lighting). For imbalanced greenery screening, class weights remain recommended when macro-F1 on minority classes (dense_green, moderate_green) is prioritized over overall accuracy.",
+  "variants": [
+    {
+      "variant": "mobilenetv2_ablation_full",
+      "description": "Full pipeline (augmentation + class weights)",
+      "augmentation": true,
+      "class_weights": true,
+      "test_accuracy": 0.9331210191082803,
+      "f1_macro": 0.9098136019105714,
+      "per_class_f1": {
+        "dense_green": 0.9574468085106383,
+        "moderate_green": 0.9411764705882353,
+        "sparse_green": 0.7887323943661971,
+        "minimal_green": 0.9518987341772152
+      }
+    },
+    {
+      "variant": "mobilenetv2_ablation_no_aug",
+      "description": "No augmentation, with class weights",
+      "augmentation": false,
+      "class_weights": true,
+      "test_accuracy": 0.9617834394904459,
+      "f1_macro": 0.9421217702830629,
+      "per_class_f1": {
+        "dense_green": 0.9574468085106383,
+        "moderate_green": 0.9411764705882353,
+        "sparse_green": 0.8923076923076924,
+        "minimal_green": 0.9775561097256857
+      }
+    },
+    {
+      "variant": "mobilenetv2_ablation_no_weights",
+      "description": "With augmentation, no class weights",
+      "augmentation": true,
+      "class_weights": false,
+      "test_accuracy": 0.9522292993630573,
+      "f1_macro": 0.9338236354459586,
+      "per_class_f1": {
+        "dense_green": 0.9777777777777777,
+        "moderate_green": 0.9565217391304348,
+        "sparse_green": 0.835820895522388,
+        "minimal_green": 0.9651741293532339
+      }
+    },
+    {
+      "variant": "mobilenetv2_ablation_bare",
+      "description": "No augmentation, no class weights",
+      "augmentation": false,
+      "class_weights": false,
+      "test_accuracy": 0.9745222929936306,
+      "f1_macro": 0.9603431210226605,
+      "per_class_f1": {
+        "dense_green": 0.968421052631579,
+        "moderate_green": 0.9696969696969697,
+        "sparse_green": 0.9180327868852459,
+        "minimal_green": 0.9852216748768473
+      }
+    }
+  ]
+}

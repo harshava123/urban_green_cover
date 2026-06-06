@@ -1,0 +1,98 @@
+{
+  "model_name": "efficientnetb0",
+  "total_predictions": 314,
+  "error_rate": 0.35031847133757965,
+  "most_common_confusion_pairs": [
+    {
+      "true": "dense_green",
+      "predicted": "minimal_green",
+      "count": 46
+    },
+    {
+      "true": "moderate_green",
+      "predicted": "minimal_green",
+      "count": 34
+    },
+    {
+      "true": "sparse_green",
+      "predicted": "minimal_green",
+      "count": 30
+    }
+  ],
+  "high_confidence_errors": [
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.3413983881473541,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.32930076122283936,
+      "correct": false
+    },
+    {
+      "true_class": "dense_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.32925155758857727,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.3285791873931885,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.32712945342063904,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.3268097937107086,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.3257470428943634,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.3251613974571228,
+      "correct": false
+    },
+    {
+      "true_class": "sparse_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.3232521414756775,
+      "correct": false
+    },
+    {
+      "true_class": "dense_green",
+      "pred_class": "minimal_green",
+      "confidence": 0.32024577260017395,
+      "correct": false
+    }
+  ],
+  "deployment_notes": {
+    "screening_role": "Use as decision-support for human review, not autonomous policy decisions.",
+    "main_risks": [
+      "Adjacent greenery classes (sparse vs moderate) are visually similar.",
+      "Seasonal and lighting variation may reduce robustness.",
+      "Dataset geography may not generalize to new cities.",
+      "High-confidence errors can mislead non-expert reviewers."
+    ],
+    "validation_requirements": [
+      "Prospective validation on locally captured street-level images.",
+      "Expert adjudication for borderline cases.",
+      "Periodic retraining with domain-shift monitoring."
+    ]
+  }
+}

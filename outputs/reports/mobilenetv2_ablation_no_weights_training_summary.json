@@ -1,0 +1,15 @@
+{
+  "model_name": "mobilenetv2_ablation_no_weights",
+  "base_architecture": "mobilenetv2",
+  "parameters": 2263108,
+  "trainable_parameters": 5124,
+  "epochs_run": 30,
+  "final_train_accuracy": 0.9626104831695557,
+  "final_val_accuracy": 0.9617834687232971,
+  "best_val_accuracy": 0.9649681448936462,
+  "training_time_sec": 759.4564626000001,
+  "augmentation_used": true,
+  "class_weight_used": false,
+  "fine_tune": false,
+  "model_path": "outputs\\models\\mobilenetv2_ablation_no_weights.weights.h5"
+}

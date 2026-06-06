@@ -1,0 +1,56 @@
+{
+  "models": [
+    {
+      "model_name": "custom_cnn",
+      "parameters": 391364,
+      "trainable_parameters": 390404,
+      "epochs_run": 30,
+      "final_train_accuracy": 0.889870822429657,
+      "final_val_accuracy": 0.8566879034042358,
+      "best_val_accuracy": 0.8789808750152588,
+      "training_time_sec": 1426.3571600000141,
+      "class_weight_used": true,
+      "fine_tune": false,
+      "model_path": "outputs\\models\\custom_cnn.keras"
+    },
+    {
+      "model_name": "mobilenetv2",
+      "parameters": 2263108,
+      "trainable_parameters": 5124,
+      "epochs_run": 25,
+      "final_train_accuracy": 0.9490142464637756,
+      "final_val_accuracy": 0.9490445852279663,
+      "best_val_accuracy": 0.9490445852279663,
+      "training_time_sec": 509.09893010003725,
+      "class_weight_used": true,
+      "fine_tune": false,
+      "model_path": "outputs\\models\\mobilenetv2.keras"
+    },
+    {
+      "model_name": "resnet50",
+      "parameters": 23595908,
+      "trainable_parameters": 8196,
+      "epochs_run": 14,
+      "final_train_accuracy": 0.942216157913208,
+      "final_val_accuracy": 0.9681528806686401,
+      "best_val_accuracy": 0.9808917045593262,
+      "training_time_sec": 1272.7316116000293,
+      "class_weight_used": true,
+      "fine_tune": false,
+      "model_path": "outputs\\models\\resnet50.keras"
+    },
+    {
+      "model_name": "efficientnetb0",
+      "parameters": 4054695,
+      "trainable_parameters": 5124,
+      "epochs_run": 9,
+      "final_train_accuracy": 0.28687968850135803,
+      "final_val_accuracy": 0.30573248863220215,
+      "best_val_accuracy": 0.6528662443161011,
+      "training_time_sec": 471.4277607999975,
+      "class_weight_used": true,
+      "fine_tune": false,
+      "model_path": "outputs\\models\\efficientnetb0.keras"
+    }
+  ]
+}

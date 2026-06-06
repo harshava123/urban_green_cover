@@ -1,0 +1,33 @@
+{
+  "research_question": "RQ4",
+  "method": "Grad-CAM (custom CNN) and input-gradient saliency (transfer learning models)",
+  "models_analyzed": ["custom_cnn", "mobilenetv2", "resnet50"],
+  "findings": [
+    {
+      "category": "correct_dense_green",
+      "observation": "Heatmaps consistently activate over large contiguous vegetated regions (forest patches, agricultural fields, golf courses). The model focuses on canopy texture and green coverage rather than image borders."
+    },
+    {
+      "category": "correct_moderate_green",
+      "observation": "Moderate-green correct predictions highlight mixed vegetation along rivers and chaparral scrub. Activation spans medium-density green areas rather than uniform forest."
+    },
+    {
+      "category": "correct_minimal_green",
+      "observation": "For built-up scenes, saliency concentrates on roads, rooftops, and parking areas with little activation on vegetation, matching the minimal_green label."
+    },
+    {
+      "category": "false_positive_sparse_as_minimal",
+      "observation": "Common error: minimal_green misclassified as sparse_green. Saliency shows partial activation on small tree clusters or lawns near residential areas, causing the model to overestimate greenery."
+    },
+    {
+      "category": "false_negative_dense_as_moderate",
+      "observation": "Dense-green scenes with patchy canopy sometimes activate only on edge vegetation; the model underweights central green mass and predicts moderate_green."
+    }
+  ],
+  "conclusion": "Explanation maps show that successful predictions align with visible vegetation structure in aerial patches. Errors occur when greenery is sparse, mixed with urban texture, or when adjacent classes (sparse vs minimal, dense vs moderate) share similar low-level features. This supports using the model as screening support with human review for borderline cases.",
+  "figure_locations": [
+    "outputs/figures/grad_cam/custom_cnn/",
+    "outputs/figures/grad_cam/mobilenetv2/",
+    "outputs/figures/grad_cam/resnet50/"
+  ]
+}

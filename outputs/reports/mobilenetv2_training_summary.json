@@ -1,0 +1,13 @@
+{
+  "model_name": "mobilenetv2",
+  "parameters": 2263108,
+  "trainable_parameters": 5124,
+  "epochs_run": 25,
+  "final_train_accuracy": 0.9490142464637756,
+  "final_val_accuracy": 0.9490445852279663,
+  "best_val_accuracy": 0.9490445852279663,
+  "training_time_sec": 509.09893010003725,
+  "class_weight_used": true,
+  "fine_tune": false,
+  "model_path": "outputs\\models\\mobilenetv2.keras"
+}

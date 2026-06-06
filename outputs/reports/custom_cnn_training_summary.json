@@ -1,0 +1,13 @@
+{
+  "model_name": "custom_cnn",
+  "parameters": 391364,
+  "trainable_parameters": 390404,
+  "epochs_run": 30,
+  "final_train_accuracy": 0.889870822429657,
+  "final_val_accuracy": 0.8566879034042358,
+  "best_val_accuracy": 0.8789808750152588,
+  "training_time_sec": 1426.3571600000141,
+  "class_weight_used": true,
+  "fine_tune": false,
+  "model_path": "outputs\\models\\custom_cnn.keras"
+}
